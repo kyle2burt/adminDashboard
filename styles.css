@@ -3,11 +3,13 @@
     --white: #F0EDCF;
     --lightblue: #40A2D8;
     --darkblue: #0B60B0;
+    --lightgray: #e6e6e6;
 }
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 .icon {
     filter: invert(95%) sepia(13%) saturate(367%) hue-rotate(4deg) brightness(97%) contrast(95%);
@@ -15,6 +17,12 @@ body {
 h1 {
     margin: 0;
     font-size: x-large;
+}
+h2 {
+    margin: 0;
+}
+p {
+    margin: 3px;
 }
 ul {
     list-style: none;
@@ -42,26 +50,59 @@ ul {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 25px;
+    gap: 20px;
+}
+.header .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .search input {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--lightgray);
 }
 .header > .welcome {
     grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header .welcome img {
+    border-radius: 40px;
 }
 .header > .profile {
-    display: grid;
-    justify-items: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.header .profile img {
+    border-radius: 25px;
 }
 .header > .buttons {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     justify-items: center;
-    align-items: center;
+    align-items: end;
+}
+.header .buttons button {
+    color: var(--white);
+    background-color: var(--lightblue);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    width: 5rem;
 }
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
-    background-color: #e6e6e6;
+    background-color: var(--lightgray);
     padding: 25px;
 }
 .projects {
