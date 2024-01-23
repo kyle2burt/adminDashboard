@@ -1,6 +1,20 @@
+:root {
+    --black: #000000;
+    --white: #F0EDCF;
+    --lightblue: #40A2D8;
+    --darkblue: #0B60B0;
+}
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    font-family: 'Roboto', sans-serif;
+}
+.icon {
+    filter: invert(95%) sepia(13%) saturate(367%) hue-rotate(4deg) brightness(97%) contrast(95%);
+}
+h1 {
+    margin: 0;
+    font-size: x-large;
 }
 ul {
     list-style: none;
@@ -11,24 +25,32 @@ ul {
     grid-row-start: 1;
     grid-row-end: 3;
 
+    color: var(--white);
+    background-color: var(--lightblue);
     display: grid;
-    grid-template-rows: 5rem 10rem 5rem;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 20px;
+}
+.sidebar > .title,
+.sidebar > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
 }
 .header {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding: 25px;
 }
-.header > input {
-    margin: 10px;
-}
-.welcome {
+.header > .welcome {
     grid-row-start: 2;
 }
-.profile {
+.header > .profile {
     display: grid;
     justify-items: end;
 }
-.buttons {
+.header > .buttons {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     justify-items: center;
@@ -39,6 +61,8 @@ ul {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
+    background-color: #e6e6e6;
+    padding: 25px;
 }
 .projects {
     grid-row-start: 1;
@@ -47,4 +71,11 @@ ul {
 .projects > div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+.card {
+    background-color: white;
+}
+.projects .card {
+    padding: 25px;
 }
