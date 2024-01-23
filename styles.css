@@ -18,11 +18,12 @@ h1 {
     margin: 0;
     font-size: x-large;
 }
-h2 {
+h2,
+h4 {
     margin: 0;
 }
 p {
-    margin: 3px;
+    margin: 8px 0;
 }
 ul {
     list-style: none;
@@ -36,7 +37,7 @@ ul {
     color: var(--white);
     background-color: var(--lightblue);
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 5rem 20rem 10rem;
     gap: 20px;
 }
 .sidebar > .title,
@@ -114,9 +115,45 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
 }
-.card {
-    background-color: white;
-}
 .projects .card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+.projects .color {
+    background-color: var(--darkblue);
+    padding: 4px;
+}
+.projects .content {
     padding: 25px;
+}
+.projects .card .buttons {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+.announcements .content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+.announcements hr {
+    margin: 20px 0;
+}
+.trending .content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+}
+.trending .card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.trending .card img {
+    border-radius: 25px;
 }
