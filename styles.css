@@ -1,8 +1,50 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .sidebar {
     grid-row-start: 1;
-    grid-row-end: 3
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-rows: 5rem 10rem 5rem;
+}
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.header > input {
+    margin: 10px;
+}
+.welcome {
+    grid-row-start: 2;
+}
+.profile {
+    display: grid;
+    justify-items: end;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-items: center;
+    align-items: center;
+}
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+.projects {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.projects > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
